@@ -15,6 +15,10 @@ import com.volla.wiki.databinding.ActivityArticleBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
+import android.view.ViewGroup
 
 class ArticleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityArticleBinding
@@ -31,6 +35,16 @@ class ArticleActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = title
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.toolbar) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+
+            view.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+                topMargin = systemBars.top   // Toolbar genau unter die Statusleiste schieben
+            }
+
+            WindowInsetsCompat.CONSUMED
+        }
 
         setupWebView()
         loadArticle(url)
