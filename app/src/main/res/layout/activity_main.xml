@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#D32F2F"
+            android:background="#730D0D"
             app:titleTextColor="#FFFFFF"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -50,7 +50,7 @@
                         android:text="Volla\nOnline"
                         android:textSize="10sp"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="#D32F2F" />
+                        android:backgroundTint="#730D0D" />
 
                     <Button
                         android:id="@+id/btnBlog"
@@ -61,7 +61,7 @@
                         android:text="Volla\nBlog"
                         android:textSize="10sp"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="#D32F2F" />
+                        android:backgroundTint="#730D0D" />
 
                     <Button
                         android:id="@+id/btnWiki"
@@ -72,7 +72,7 @@
                         android:text="Volla\nWiki"
                         android:textSize="10sp"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="#D32F2F" />
+                        android:backgroundTint="#730D0D" />
 
                     <Button
                         android:id="@+id/btnForum"
@@ -83,7 +83,7 @@
                         android:text="Volla\nForum"
                         android:textSize="10sp"
                         android:textColor="#FFFFFF"
-                        android:backgroundTint="#D32F2F" />
+                        android:backgroundTint="#730D0D" />
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -125,7 +125,7 @@
                             android:layout_margin="4dp"
                             android:text="Deutsch"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiEn"
@@ -135,7 +135,7 @@
                             android:layout_margin="4dp"
                             android:text="English"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiCs"
@@ -145,7 +145,7 @@
                             android:layout_margin="4dp"
                             android:text="Česky"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiIt"
@@ -155,7 +155,7 @@
                             android:layout_margin="4dp"
                             android:text="Italiano"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiEs"
@@ -165,7 +165,7 @@
                             android:layout_margin="4dp"
                             android:text="Español"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiDa"
@@ -175,7 +175,7 @@
                             android:layout_margin="4dp"
                             android:text="Dansk"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiNo"
@@ -185,7 +185,7 @@
                             android:layout_margin="4dp"
                             android:text="Norsk"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnWikiSv"
@@ -195,7 +195,7 @@
                             android:layout_margin="4dp"
                             android:text="Svensk"
                             android:textSize="10sp"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
                     </GridLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -237,7 +237,7 @@
                             android:layout_margin="4dp"
                             android:text="🇩🇪 Deutsch"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnForumEn"
@@ -246,7 +246,7 @@
                             android:layout_margin="4dp"
                             android:text="🇬🇧 English"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnForumEs"
@@ -255,7 +255,7 @@
                             android:layout_margin="4dp"
                             android:text="🇪🇸 Español"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnForumCs"
@@ -264,7 +264,7 @@
                             android:layout_margin="4dp"
                             android:text="🇨🇿 Česky Slovenská"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
 
                         <Button
                             android:id="@+id/btnForumIt"
@@ -273,7 +273,7 @@
                             android:layout_margin="4dp"
                             android:text="🇮🇹 Italiano"
                             android:textColor="#FFFFFF"
-                            android:backgroundTint="#D32F2F" />
+                            android:backgroundTint="#730D0D" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -284,7 +284,7 @@
                     android:layout_margin="8dp"
                     android:text="Weitere Beiträge laden"
                     android:textColor="#FFFFFF"
-                    android:backgroundTint="#D32F2F"
+                    android:backgroundTint="#730D0D"
                     android:visibility="gone" />
             </LinearLayout>
 
