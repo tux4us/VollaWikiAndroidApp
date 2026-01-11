@@ -113,7 +113,7 @@ res/xml/network_security_config.xml
 
 - Light Theme: `res/values/themes.xml`
 - Dark Theme: `res/values-night/themes.xml`
-- Hauptfarbe: Volla-Rot (#D32F2F)
+- Hauptfarbe: Rot
 
 ## 🤝 Beitragen
 
