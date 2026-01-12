@@ -49,47 +49,54 @@ class ContentActivity : AppCompatActivity() {
             setSupportZoom(true)
 
             // Optimale Mobile-Einstellungen
-            useWideViewPort = true
-            loadWithOverviewMode = true
-            layoutAlgorithm = android.webkit.WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING
+            useWideViewPort = false  // Wichtig: false für Wiki
+            loadWithOverviewMode = false  // Wichtig: false
+            layoutAlgorithm = android.webkit.WebSettings.LayoutAlgorithm.NORMAL
 
             // Bessere Schriftgrößen
-            textZoom = 100  // Standard 100%
+            textZoom = 100
             minimumFontSize = 14
             defaultFontSize = 16
 
             domStorageEnabled = true
         }
-
-        // Kein Initial Scale - lassen wir responsive arbeiten
     }
 
     private fun loadContent(url: String) {
         binding.progressBar.visibility = View.VISIBLE
 
-        // Prüfe ob es eine Wiki-Seite ist
         if (url.contains("wiki.volla.online")) {
-            // Lade Wiki-Seite mit mobilem Viewport
-            binding.webView.loadUrl(url)
-
-            // Injiziere CSS für mobile Darstellung nach dem Laden
             binding.webView.webViewClient = object : WebViewClient() {
                 override fun onPageFinished(view: WebView?, url: String?) {
                     binding.progressBar.visibility = View.GONE
 
-                    // Injiziere mobile CSS
                     view?.evaluateJavascript("""
                     (function() {
+                        // Mobile Viewport - BREITER
                         var meta = document.createElement('meta');
                         meta.name = 'viewport';
-                        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes';
+                        meta.content = 'width=device-width, initial-scale=1.0, user-scalable=yes';
+                        var existing = document.querySelector('meta[name="viewport"]');
+                        if (existing) {
+                            existing.remove();
+                        }
                         document.getElementsByTagName('head')[0].appendChild(meta);
                         
+                        // CSS für volle Breite
                         var style = document.createElement('style');
                         style.innerHTML = `
                             body { 
                                 font-size: 16px !important; 
                                 line-height: 1.6 !important;
+                                padding: 8px !important;
+                                margin: 0 !important;
+                                max-width: 100% !important;
+                                width: 100% !important;
+                            }
+                            #content, #mw-content-text, .mw-parser-output {
+                                max-width: 100% !important;
+                                width: 100% !important;
+                                margin: 0 !important;
                                 padding: 8px !important;
                             }
                             img { 
@@ -103,12 +110,19 @@ class ContentActivity : AppCompatActivity() {
                             pre, code { 
                                 font-size: 13px !important; 
                                 overflow-x: auto !important;
+                                max-width: 100% !important;
                             }
-                            #mw-navigation, .mw-jump-link { 
+                            #mw-navigation, .mw-jump-link, #mw-head {
                                 display: none !important; 
+                            }
+                            #mw-page-base, #mw-head-base {
+                                display: none !important;
                             }
                         `;
                         document.head.appendChild(style);
+                        
+                        // Scrolle nach oben
+                        window.scrollTo(0, 0);
                     })();
                 """, null)
                 }
@@ -117,8 +131,16 @@ class ContentActivity : AppCompatActivity() {
                     binding.progressBar.visibility = View.VISIBLE
                 }
             }
+            binding.webView.loadUrl(url)
         } else {
-            // Normale Seiten
+            binding.webView.webViewClient = object : WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
+                override fun onPageFinished(view: WebView?, url: String?) {
+                    binding.progressBar.visibility = View.GONE
+                }
+            }
             binding.webView.loadUrl(url)
         }
     }
