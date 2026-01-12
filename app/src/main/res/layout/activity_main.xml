@@ -123,7 +123,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Deutsch"
+                            android:text="🇩🇪 Wiki\nDeutsch"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -133,7 +133,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="English"
+                            android:text="🇬🇧 Wiki\nEnglish"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -143,7 +143,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Česky"
+                            android:text="🇨🇿Wiki\n🇸🇰ČZ-SK"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -153,7 +153,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Italiano"
+                            android:text="🇮🇹 Wiki\nItaliano"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -163,7 +163,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Español"
+                            android:text="🇪🇸 Wiki\nEspañol"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -173,7 +173,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Dansk"
+                            android:text="🇩🇰 Wiki\nDansk"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -183,7 +183,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Norsk"
+                            android:text="🇳🇴 Wiki\nNorsk"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
 
@@ -193,7 +193,7 @@
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
                             android:layout_margin="4dp"
-                            android:text="Svensk"
+                            android:text="🇸🇪 Wiki\nSvensk"
                             android:textSize="10sp"
                             android:backgroundTint="#730D0D" />
                     </GridLayout>
@@ -235,7 +235,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="🇩🇪 Deutsch"
+                            android:text="🇩🇪 Forum Deutsch"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="#730D0D" />
 
@@ -244,7 +244,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="🇬🇧 English"
+                            android:text="🇬🇧 Forum English"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="#730D0D" />
 
@@ -253,7 +253,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="🇪🇸 Español"
+                            android:text="🇪🇸 Foro Español"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="#730D0D" />
 
@@ -262,7 +262,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="🇨🇿 Česky Slovenská"
+                            android:text="🇨🇿 Fórum Česky Slovenská"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="#730D0D" />
 
@@ -271,7 +271,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="🇮🇹 Italiano"
+                            android:text="🇮🇹 Forum Italiano"
                             android:textColor="#FFFFFF"
                             android:backgroundTint="#730D0D" />
                     </LinearLayout>

@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = "Volla Hub"
+        supportActionBar?.title = "Volla Hub \uD83D\uDDA5 \uD83D\uDCD6 \uD83D\uDD0D"
 
         // Force weiße Toolbar-Icons
         binding.toolbar.overflowIcon?.setTint(android.graphics.Color.WHITE)
